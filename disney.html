@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8' name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="disney.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  function atracoes() {
+//    jQuery.getJSON('http://touringplans.com/magic-kingdom/attractions.json', function(data) {
+//      console.log(data);
+//    })
+
+    jQuery.ajax({
+      url: 'https://touringplans.com/magic-kingdom/attractions.json',
+      crossDomain: true,
+
+    })
+  }
+
+
+  jQuery(document).ready(function() {
+    atracoes();
+  })
+</script>
+
+</head>
+<body>
+
+<h2>Welcome to Disney <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"></h2>
+
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2" id="search">
+  <button onclick="disney()" type="button"id="btnsearch"><i class="fa fa-search"></i></button>
+</form>
+<div>
+  <img src= "disney.png" alt= "desenho dos castelos da Disney" class="image">
+</div>
+
+</body>
+</html>
